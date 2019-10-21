@@ -1,5 +1,6 @@
 # BunnyCDN.Java.Storage
-The official Java library used for interacting with the BunnyCDN Storage API.
+The official Java library used for interacting with the BunnyCDN Storage API. 
+We would like to thank doghouch for the development.
 
 ## Usage
 
