@@ -1,10 +1,19 @@
 # BunnyCDN.Java.Storage
+
 The official Java library used for interacting with the BunnyCDN Storage API. 
-We would like to thank doghouch for the development.
+We would like to thank [@doghouch](https://github.com/doghouch) for the development.
+
+## Latest Release
+
+[Click here](https://github.com/BunnyWay/BunnyCDN.Java.Storage/releases/download/Main/BCDN.jar) to download the latest release.
 
 ## Usage
 
-This client requires Java 7+. Import the JAR and you're good to go!
+This client requires Java 7+. Import the JAR and add the following to your class:
+
+	import bunnycdn.BCDNObject;
+	import bunnycdn.BCDNStorage;
+	import bunnycdn.Converter;
 
 Having said that, before you delve into any of the examples, the BCDNStorage object must be initialized: 
 
