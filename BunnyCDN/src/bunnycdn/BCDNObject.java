@@ -81,10 +81,12 @@ public class BCDNObject {
     public String getStorageZoneID() {
         return storageZoneID;
     }
+    
     @JsonProperty("Checksum")
     public String getChecksum() {
         return checksum;
     }
+    
     @JsonProperty("ReplicatedZones")
     public String getReplicatedZones() {
         return replicatedZones;
