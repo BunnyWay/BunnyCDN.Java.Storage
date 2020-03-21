@@ -2,6 +2,9 @@ package bunnycdn;
 
 import com.fasterxml.jackson.annotation.*;
 
+// Gracefully handle new paramaters (unlike before)
+@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class BCDNObject {
 
     private long failIndex;
@@ -18,6 +21,7 @@ public class BCDNObject {
     private String storageZoneID;
     private String checksum;
     private String replicatedZones;
+    
     @JsonProperty("FailIndex")
     public long getFailIndex() {
         return failIndex;
