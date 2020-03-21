@@ -17,6 +17,7 @@ public class BCDNObject {
     private String dateCreated;
     private String storageZoneID;
     private String checksum;
+    private String replicatedZones;
     @JsonProperty("FailIndex")
     public long getFailIndex() {
         return failIndex;
@@ -79,6 +80,10 @@ public class BCDNObject {
     @JsonProperty("Checksum")
     public String getChecksum() {
         return checksum;
+    }
+    @JsonProperty("ReplicatedZones")
+    public String getReplicatedZones() {
+        return replicatedZones;
     }
 
 }
