@@ -61,7 +61,7 @@ This should, assuming you specify a valid path and API key, output something sim
 	- Last Modified: 2019-10-15T23:09:50.368
 	- Created on: 2019-10-15T23:09:50.368
 
-_Note: if you speficy an invailid directory, an Exception will be thrown ("File/Folder Not Found")._
+_Note: if you specify an invailid directory, an Exception will be thrown ("File/Folder Not Found")._
 
 ### (void) .uploadObject(String localPath, String remotePath)
 
@@ -71,7 +71,7 @@ This function allows you to upload any local file to your storage zone. For exam
 
 will upload "logo.png" to the root directory of your storage zone.
 
-_Note: if you speficy an invailid directory or file, an Exception will be thrown ("File/Folder Not Found")._
+_Note: if you specify an invailid directory or file, an Exception will be thrown ("File/Folder Not Found")._
 
 ### (void) .downloadObject(String remotePath, String localPath)
 
@@ -81,7 +81,7 @@ This function is self explanatory once you've used the uploadObject() call.
 
 The code above will download "style.css" from the root directory of your storage zone to your computer.
 
-_Note: if you speficy an invailid directory or file, an Exception will be thrown ("File/Folder Not Found")._
+_Note: if you specify an invailid directory or file, an Exception will be thrown ("File/Folder Not Found")._
 
 ### (void) .deleteObject(String remotePath)
 
