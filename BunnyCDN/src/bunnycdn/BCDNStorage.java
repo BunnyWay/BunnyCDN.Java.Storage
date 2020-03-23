@@ -96,6 +96,7 @@ public class BCDNStorage extends Exception {
         String inputLine;
         BufferedReader in;
         StringBuffer resp = new StringBuffer();
+        url = java.net.URLEncoder.encode(url, "UTF-8").replace("+", "%20");
         HttpsURLConnection req = (HttpsURLConnection) (new URL(BASE_URL + "/" + nameOfZone + "/" + url)).openConnection();
         req.setRequestMethod(method);
         // For analytical purposes
