@@ -132,6 +132,7 @@ public class BCDNStorage extends Exception {
                     while ((bytesRead = req.getInputStream().read(buffer)) != -1) {
                         fs.write(buffer, 0, bytesRead);
                     }
+                    fs.close();
                 } else {
                     in = new BufferedReader(new InputStreamReader(req.getInputStream()));
                     while ((inputLine = in.readLine()) != null) {
