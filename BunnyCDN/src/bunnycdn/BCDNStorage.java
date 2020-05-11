@@ -112,9 +112,10 @@ public class BCDNStorage extends Exception {
                 BufferedOutputStream os = new BufferedOutputStream(req.getOutputStream());
                 BufferedInputStream is = new BufferedInputStream(new FileInputStream(arg));
                 int i;
+                byte[] buffer1 = new byte[4096];
                 // read byte by byte until end of stream
-                while ((i = is.read()) > 0) {
-                    os.write(i);
+                while ((i = is.read(buffer1)) >= 0) {
+                    os.write(buffer1,0,i);
                 }
                 is.close();
                 os.close();
