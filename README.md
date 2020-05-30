@@ -15,11 +15,11 @@ Having said that, before you delve into any of the examples, the BCDNStorage obj
 
 	BCDNStorage test = new BCDNStorage("YOUR_ZONE_NAME", "YOUR_API_KEY");
 
-**NEW**: You can now specify the "main" location of your zone. By default, when no location is specified, this module assumes that your zone is part of the `de` region (ie. if your zone isn't replicated or you've enabled the replication feature on an old storage zone).
+**NEW**: You can now specify the "main" location of your zone. By default, when no location is specified, this module assumes that your zone is part of the `de` region (if your zone isn't replicated or you've enabled the replication feature on an old storage zone -> there is no need to specify a location).
 
 With that said, the general format is below:
 
-	BCDNStorage test = new BCDNStorage("YOUR_ZONE_NAME", "YOUR_API_KEY", "AREA");
+	BCDNStorage test = new BCDNStorage("YOUR_ZONE_NAME", "YOUR_API_KEY", null);
 
 Example - if your zone is being replicated from New York, use the following:
 
