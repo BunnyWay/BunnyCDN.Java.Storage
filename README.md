@@ -38,7 +38,7 @@ Example - if the main region on your replicated zone is in New York, use the fol
 
 _Note: If you enter an invalid key or zone, an exception will be thrown and it must be caught._
 
-[Return to top &uarr;](#bunnycdnjavastorage)
+[Return to top &lsh;](#bunnycdnjavastorage)
 
 ### (BCDNObject) .getStorageObjects(String remotePath)
 
@@ -80,7 +80,7 @@ This should, assuming you specify a valid path and API key, output something sim
 	- Last Modified: 2019-10-15T23:09:50.368
 	- Created on: 2019-10-15T23:09:50.368
 
-[Return to top &uarr;](#bunnycdnjavastorage)
+[Return to top &lsh;](#bunnycdnjavastorage)
 
 ### (void) .uploadObject(String localPath, String remotePath)
 
@@ -90,7 +90,7 @@ This function allows you to upload any local file to your storage zone. For exam
 
 will upload "logo.png" to the root directory of your storage zone.
 
-[Return to top &uarr;](#bunnycdnjavastorage)
+[Return to top &lsh;](#bunnycdnjavastorage)
 
 ### (void) .downloadObject(String remotePath, String localPath)
 
@@ -100,7 +100,7 @@ This function is self explanatory once you've used the uploadObject() call.
 
 The code above will download "style.css" from the root directory of your storage zone to your computer.
 
-[Return to top &uarr;](#bunnycdnjavastorage)
+[Return to top &lsh;](#bunnycdnjavastorage)
 
 ### (void) .deleteObject(String remotePath)
 
@@ -110,4 +110,4 @@ This function will delete a file/folder regardless of whether it exists or not. 
 
 The code above will remove the file we uploaded previously ("style.css") from the root directory of our storage zone. This action is **irreversible**.
 
-[Return to top &uarr;](#bunnycdnjavastorage)
+[Return to top &lsh;](#bunnycdnjavastorage)
