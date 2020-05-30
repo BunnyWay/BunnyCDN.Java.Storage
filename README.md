@@ -38,6 +38,8 @@ Example - if your zone is being replicated from New York, use the following:
 
 _Note: If you enter an invalid key or zone, an exception will be thrown and it must be caught._
 
+[Return to top &uarr;](#bunnycdnjavastorage)
+
 ### (BCDNObject) .getStorageObjects(String remotePath)
 
 A new data type is created called "BCDNObject." In order to use it, follow the format below:
@@ -78,6 +80,8 @@ This should, assuming you specify a valid path and API key, output something sim
 	- Last Modified: 2019-10-15T23:09:50.368
 	- Created on: 2019-10-15T23:09:50.368
 
+[Return to top &uarr;](#bunnycdnjavastorage)
+
 ### (void) .uploadObject(String localPath, String remotePath)
 
 This function allows you to upload any local file to your storage zone. For example, the following code:
@@ -85,6 +89,8 @@ This function allows you to upload any local file to your storage zone. For exam
 	test.uploadObject("C:\\Users\\Username\\Desktop\\logo.png", "logo.png");
 
 will upload "logo.png" to the root directory of your storage zone.
+
+[Return to top &uarr;](#bunnycdnjavastorage)
 
 ### (void) .downloadObject(String remotePath, String localPath)
 
@@ -94,6 +100,8 @@ This function is self explanatory once you've used the uploadObject() call.
 
 The code above will download "style.css" from the root directory of your storage zone to your computer.
 
+[Return to top &uarr;](#bunnycdnjavastorage)
+
 ### (void) .deleteObject(String remotePath)
 
 This function will delete a file/folder regardless of whether it exists or not. It is the equivelant of running `rm -rf` on a file/folder.
@@ -101,3 +109,5 @@ This function will delete a file/folder regardless of whether it exists or not. 
 	test.deleteObject("style.css")
 
 The code above will remove the file we uploaded previously ("style.css") from the root directory of our storage zone. This action is **irreversible**.
+
+[Return to top &uarr;](#bunnycdnjavastorage)
