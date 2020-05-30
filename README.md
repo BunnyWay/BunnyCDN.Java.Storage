@@ -9,6 +9,15 @@ We would like to thank [@doghouch](https://github.com/doghouch) for the developm
 
 ## Usage
 
+### Table of Contents
+
+- [Intro](#initialization)
+- [Get Storage Objects](#bcdnobject-getstorageobjectsstring-remotepath)
+- [Upload Object](#void-uploadobjectstring-localpath-string-remotepath)
+- [Get Storage Objects](#void-deleteobjectstring-remotepath)
+
+### Initialization
+
 This client requires Java 7+. The JAR comes bundled with all the required dependencies (Jackson Core/Databind/Annotations @ https://github.com/FasterXML).
 
 Having said that, before you delve into any of the examples, the BCDNStorage object must be initialized. The following method will be depreciated eventually; it exists merely for compatibility reasons.
