@@ -23,7 +23,7 @@ Current Version: 1.0.2
 
 This client requires Java 7+. The JAR comes bundled with all the required dependencies (Jackson Core/Databind/Annotations @ https://github.com/FasterXML).
 
-Having said that, before you delve into any of the examples, the BCDNStorage object must be initialized. The following method will be depreciated eventually; it exists merely for compatibility reasons.
+Having said that, before you delve into any of the examples, the BCDNStorage object must be initialized. The following constructor will be depreciated eventually; it exists merely for compatibility reasons.
 
 	BCDNStorage test = new BCDNStorage("YOUR_ZONE_NAME", "YOUR_API_KEY");
 
