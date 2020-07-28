@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 
 public class BCDNStorage extends Exception {
 
-	private String VERSION = "1.0.2";
+	private String VERSION = "1.0.3";
 	private String BASE_URL = "https://storage.bunnycdn.com";
 	private String nameOfZone;
 	private String apiKey;
@@ -118,6 +118,8 @@ public class BCDNStorage extends Exception {
 			}
 			break;
 		}
+		// Forgot to call the request....
+		req.getResponseCode();
 		return resp.toString();
 	}
 
