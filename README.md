@@ -5,7 +5,7 @@ We would like to thank [@doghouch](https://github.com/doghouch) for the developm
 
 ## Latest Release
 
-Current Version: 1.0.2
+Current Version: 1.0.3
 
 [Click here](https://github.com/BunnyWay/BunnyCDN.Java.Storage/releases/download/Main/BCDN.jar) to download the release.
 
