@@ -70,7 +70,7 @@ public class BCDNStorage extends Exception {
 		for (int a = 0; a < temp.length; a++) {
 			temp[a] = java.net.URLEncoder.encode(temp[a], "UTF-8").replace("+", "%20");
 		}
-		url = String.join("/", temp) + "/";
+		url = String.join("/", temp);
 		HttpsURLConnection req = (HttpsURLConnection) (new URL(BASE_URL + "/" + nameOfZone + "/" + url))
 				.openConnection();
 		req.setRequestMethod(method);
