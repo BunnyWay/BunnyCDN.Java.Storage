@@ -1,12 +1,16 @@
+import java.net.URL;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
+import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class BCDNStorage extends Exception {
 
@@ -28,7 +32,52 @@ public class BCDNStorage extends Exception {
 			BASE_URL = "https://" + region + ".storage.bunnycdn.com";
 		}
 	}
-
+	
+	private static void listAllFiles(String localPath) throws Exception {
+		try {
+			File directory = new File(localPath);
+			File[] files = directory.listFiles();
+			for (File file : files) {
+				if (file.isDirectory()) {
+					listAllFiles(file.getAbsolutePath());
+				} else {
+					String temp = file.getCanonicalPath().replace("\\", "/");
+					tempFiles.add(temp);
+				}
+			}
+		} catch (Exception e) {
+			throw new IOException("Directory specified does not exist");
+		}
+	}
+	
+	public void uploadFolder(String localPath, String remotePath) throws Exception {
+		String toReturn = "";
+		// Replacing backward slashes with forward ones
+		String temp = localPath.replace("\\", "/");
+		// Getting the "main directory"
+		String[] temp_2 = temp.split("/");
+		Collections.reverse(Arrays.asList(temp_2));
+		tempFiles.clear();
+		listAllFiles(temp);
+		// Looping through files
+		for (String file : tempFiles) {
+			String finalRemotePath = "";
+			String tempUploadPath = file.substring(file.indexOf(temp_2[0]));
+			// Normalizing directory naming
+			if (remotePath.length() == 0) {
+				remotePath = "/";
+			}
+			// Final round of normalization
+			if ((remotePath.charAt(remotePath.length() - 1) + "").equals("/")) {
+				finalRemotePath = remotePath;
+			} else {
+				finalRemotePath = remotePath + "/";
+			}
+			// Upload object
+			uploadObject(file, finalRemotePath + tempUploadPath);
+		}
+	}
+	
 	public void uploadObject(String localPath, String remotePath) throws Exception {
 		String toReturn = "";
 		// Send request
