@@ -39,10 +39,9 @@ public class BCDNStorage extends Exception {
 			File[] files = directory.listFiles();
 			for (File file : files) {
 				if (file.isDirectory()) {
-					listAllFiles(file.getAbsolutePath());
+					listAllFiles(file.getCanonicalPath());
 				} else {
-					String temp = file.getCanonicalPath().replace("\\", "/");
-					tempFiles.add(temp);
+					tempFiles.add(file.getCanonicalPath().replace("\\", "/"));
 				}
 			}
 		} catch (Exception e) {
@@ -64,9 +63,7 @@ public class BCDNStorage extends Exception {
 			String finalRemotePath = "";
 			String tempUploadPath = file.substring(file.indexOf(temp_2[0]));
 			// Normalizing directory naming
-			if (remotePath.length() == 0) {
-				remotePath = "/";
-			}
+			if (remotePath.length() == 0) remotePath = "/";
 			// Final round of normalization
 			if ((remotePath.charAt(remotePath.length() - 1) + "").equals("/")) {
 				finalRemotePath = remotePath;
