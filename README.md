@@ -84,6 +84,16 @@ This should, assuming you specify a valid path and API key, output something sim
 
 [Return to top &lsh;](#bunnycdnjavastorage)
 
+### (void) .uploadFolder(String localPath, String remotePath) 
+
+This function is still being tested. With that said, it allows you to upload any local folder to your storage zone. For example, the following code:
+
+	test.uploadObject("C:\\Users\\Username\\Desktop\\YourFolder\\", "/");
+
+will upload "YourFolder/" to the root directory of your storage zone.
+
+[Return to top &lsh;](#bunnycdnjavastorage)
+
 ### (void) .uploadObject(String localPath, String remotePath)
 
 This function allows you to upload any local file to your storage zone. For example, the following code:
