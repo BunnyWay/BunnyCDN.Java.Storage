@@ -16,6 +16,7 @@ Current Version: 1.0.3
 
 - [Intro](#initialization)
 - [Get Storage Objects](#bcdnobject-getstorageobjectsstring-remotepath)
+- [Upload Directory](#void-uploadfolderstring-localpath-string-remotepath)
 - [Upload Object](#void-uploadobjectstring-localpath-string-remotepath)
 - [Download Object](#void-downloadobjectstring-remotepath-string-localpath)
 - [Delete Object](#void-deleteobjectstring-remotepath)
