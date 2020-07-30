@@ -39,7 +39,7 @@ Example - if the main region on your replicated zone is in New York, use the fol
 
 	BCDNStorage test = new BCDNStorage("YOUR_ZONE_NAME", "YOUR_API_KEY", "ny");
 
-_Note: If you enter an invalid key or zone, an exception will be thrown and it must be caught._
+**Note:** If you enter an invalid key or zone, an exception will be thrown and it must be caught.
 
 [Return to top &lsh;](#bunnycdnjavastorage)
 
