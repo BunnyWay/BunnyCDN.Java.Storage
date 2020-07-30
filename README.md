@@ -93,6 +93,8 @@ This function is still being tested. With that said, it allows you to upload any
 
 will upload "YourFolder/" to the root directory of your storage zone.
 
+Note: Empty directories will not be uploaded.
+
 [Return to top &lsh;](#bunnycdnjavastorage)
 
 ### (void) .uploadObject(String localPath, String remotePath)
