@@ -1,10 +1,10 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import javax.net.ssl.HttpsURLConnection;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -18,6 +18,7 @@ public class BCDNStorage extends Exception {
 	private String BASE_URL = "https://storage.bunnycdn.com";
 	private String nameOfZone;
 	private String apiKey;
+	private static LinkedList<String> tempFiles = new LinkedList<String>();
 
 	public BCDNStorage(String nameOfZone, String apiKey) {
 		this.apiKey = apiKey;
@@ -32,7 +33,7 @@ public class BCDNStorage extends Exception {
 			BASE_URL = "https://" + region + ".storage.bunnycdn.com";
 		}
 	}
-	
+
 	private static void listAllFiles(String localPath) throws Exception {
 		try {
 			File directory = new File(localPath);
@@ -48,7 +49,7 @@ public class BCDNStorage extends Exception {
 			throw new IOException("Directory specified does not exist");
 		}
 	}
-	
+
 	public void uploadFolder(String localPath, String remotePath) throws Exception {
 		String toReturn = "";
 		// Replacing backward slashes with forward ones
@@ -63,8 +64,9 @@ public class BCDNStorage extends Exception {
 			String finalRemotePath = "";
 			String tempUploadPath = file.substring(file.indexOf(temp_2[0]));
 			// Normalizing directory naming
-			if (remotePath.length() == 0) remotePath = "/";
-			// Final round of normalization
+			if (remotePath.length() == 0) {
+				remotePath = "/";
+			}
 			if ((remotePath.charAt(remotePath.length() - 1) + "").equals("/")) {
 				finalRemotePath = remotePath;
 			} else {
@@ -74,7 +76,7 @@ public class BCDNStorage extends Exception {
 			uploadObject(file, finalRemotePath + tempUploadPath);
 		}
 	}
-	
+
 	public void uploadObject(String localPath, String remotePath) throws Exception {
 		String toReturn = "";
 		// Send request
@@ -164,7 +166,6 @@ public class BCDNStorage extends Exception {
 			}
 			break;
 		}
-		// Forgot to call the request....
 		req.getResponseCode();
 		return resp.toString();
 	}
