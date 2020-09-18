@@ -21,8 +21,7 @@ public class BCDNStorage extends Exception {
 	private static LinkedList<String> tempFiles = new LinkedList<String>();
 
 	public BCDNStorage(String nameOfZone, String apiKey) {
-		this.apiKey = apiKey;
-		this.nameOfZone = nameOfZone;
+		this(nameOfZone, apiKey, "de");
 	}
 
 	public BCDNStorage(String nameOfZone, String apiKey, String region) {
