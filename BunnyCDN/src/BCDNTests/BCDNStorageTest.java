@@ -19,8 +19,8 @@ import BCDNStorageAPI.*;
 
 class BCDNStorageTest {
 	
-	private String apiKey = "7cbecb1d-4b73-4945-90d323f8930f-39c2-419d";
-	private String zone = "java-test";
+	private String apiKey = "";
+	private String zone = "";
 	
 	private BCDNStorage client = new BCDNStorage(zone, apiKey);
 	
