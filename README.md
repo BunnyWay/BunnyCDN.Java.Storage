@@ -25,7 +25,7 @@ Precompiled JARs deprecated.
 
 ### Initialization
 
-This client requires Java 7+. The JAR comes bundled with all the required dependencies (Jackson Core/Databind/Annotations @ https://github.com/FasterXML).
+This client requires Java 8+. The JAR comes bundled with all the required dependencies (Jackson Core/Databind/Annotations @ https://github.com/FasterXML).
 
 Having said that, before you delve into any of the examples, the BCDNStorage object must be initialized. The following constructor will be depreciated eventually; it exists merely for compatibility reasons.
 
