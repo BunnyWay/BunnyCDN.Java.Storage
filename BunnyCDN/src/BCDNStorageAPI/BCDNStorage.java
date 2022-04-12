@@ -1,3 +1,5 @@
+package BCDNStorageAPI;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -14,7 +16,8 @@ import java.io.IOException;
 
 public class BCDNStorage extends Exception {
 
-	private String VERSION = "1.0.3";
+	private static final long serialVersionUID = 1L;
+	private String VERSION = "1.0.4";
 	private String BASE_URL = "https://storage.bunnycdn.com";
 	private String nameOfZone;
 	private String apiKey;
@@ -92,6 +95,7 @@ public class BCDNStorage extends Exception {
 
 	public void deleteObject(String remotePath) throws Exception {
 		String toReturn = "";
+		
 		toReturn = sendRequest(normalizePath(remotePath), "DELETE", null, false, "");
 	}
 
@@ -114,7 +118,8 @@ public class BCDNStorage extends Exception {
 		String inputLine;
 		BufferedReader in;
 		StringBuffer resp = new StringBuffer();
-		String temp[] = url.split("/");
+		// split("/", -1) => incl. the last trailing "" in array
+		String temp[] = url.split("/", -1);
 		for (int a = 0; a < temp.length; a++) {
 			temp[a] = java.net.URLEncoder.encode(temp[a], "UTF-8").replace("+", "%20");
 		}

@@ -1,3 +1,5 @@
+package BCDNStorageAPI;
+
 import com.fasterxml.jackson.annotation.*;
 
 // Gracefully handle new parameters (unlike before)
