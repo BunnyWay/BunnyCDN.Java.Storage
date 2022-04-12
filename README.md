@@ -5,7 +5,7 @@ We would like to thank [@doghouch](https://github.com/doghouch) for the developm
 
 ## Latest Release
 
-Current Version: 1.0.3
+Current Version: 1.0.4
 
 - [Click here](https://github.com/BunnyWay/BunnyCDN.Java.Storage/releases/download/1.0.3/BCDN.jar) to download the latest release (with Jackson bundled).
 - [Click here](https://github.com/BunnyWay/BunnyCDN.Java.Storage/releases/download/1.0.3/BCDN-NoDependencies.jar) to download the latest release (without Jackson bundled). You will need to import it later yourself (the version above includes Jackson 2.9.9.3).
